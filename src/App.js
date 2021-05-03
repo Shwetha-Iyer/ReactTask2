@@ -13,7 +13,7 @@ export default function App(){
     setTime([...time,item]);
     setTotal(total+item.product_price);
     let selectedindex=productdata.findIndex((obj)=> {
-      return obj.id==item.id;
+      return obj.id===item.id;
     });
    // setProductdata()
    productdata[selectedindex].state = true;
@@ -25,7 +25,7 @@ export default function App(){
 
     setTotal(total-item.product_price);
     let selectedindex=productdata.findIndex((obj)=> {
-      return obj.id==item.id;
+      return obj.id===item.id;
     });
     productdata[selectedindex].state = false;
     setProductdata([...productdata]);
